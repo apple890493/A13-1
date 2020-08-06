@@ -12,6 +12,7 @@ app.use((req, res, next) => {
   const min = dt.getMinutes()
   const sec = dt.getSeconds()
   console.log(`${years}-${month}-${date} ${hour}:${min}:${sec} | ${req.method} from ${req.path}`)
+  .next()
 })
 
 app.get('/', (req, res) => {
